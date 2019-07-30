@@ -22,3 +22,17 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.container{
+  background-color: rgb(253, 253, 253); /* Green */
+  border:black solid 0.05px;
+  
+  color: rgb(5, 5, 5);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.box{
+  display: block;
+}
