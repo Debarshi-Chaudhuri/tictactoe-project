@@ -12,6 +12,7 @@ class Tictactoe extends Component{
         this.setState({player2:event.target.value})
     }
     submit=()=>{
+        if(this.state.player1!=='' && this.state.player2!=='' && this.state.player1!==this.state.player2)
         this.setState({s:true})
     }
     render(){
@@ -24,11 +25,11 @@ class Tictactoe extends Component{
         else
         return(
             <div>
-                <input onChange={this.change1} placeholder="Enter player 1 name"/>
-                <br></br>
-                <input onChange={this.change2} placeholder="Enter player 2 name"/>
-                <br></br>
-                <button onClick={this.submit}>Submit</button>
+                <p>Enter Player 1 name : &nbsp;<input onChange={this.change1} placeholder="Enter player 1 name"/></p>
+                
+                <p>Enter Player 2 name : &nbsp;<input onChange={this.change2} placeholder="Enter player 2 name"/></p>
+                
+                <p><button style={{height:'33px',width:'64px'}}onClick={this.submit}>Submit</button></p>
             </div>
         )
     }

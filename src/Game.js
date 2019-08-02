@@ -13,15 +13,15 @@ class Game extends Component{
         console.log(this.props.p1+','+this.props.p2
         )
         if(this.state.condition){
-            temp.splice(i*3+j,1,'x')
+            temp.splice(i*3+j,1,'X')
             this.setState({a:temp,player:this.props.p2,condition:false},()=>{
-                this.check('x',this.props.p1);
+                this.check('X',this.props.p1);
             })
         }
         else{
-            temp.splice(i*3+j,1,'o')
+            temp.splice(i*3+j,1,'O')
             this.setState({a:temp,player:this.props.p1,condition:true},()=>{
-                this.check('o',this.props.p2)
+                this.check('O',this.props.p2)
             })
         }
     }
@@ -56,12 +56,12 @@ class Game extends Component{
     render(){
         if(this.state.draw)
         return(
-            <div>
+            <div >
                 <p>{this.state.player}'s turn</p>
-                <p className='box'>
+                <div >
                 {
                     Array(3).fill(null).map(
-                        (item,i)=><p >{
+                        (item,i)=><p className='box'>{
                             Array(3).fill(null).map(
                             (item,j)=><button className='container' onClick={()=>this.click(i,j)}>{this.state.a[i*3+j]}</button>
                         )
@@ -69,7 +69,7 @@ class Game extends Component{
                         
                     )
                 }
-                </p>
+                </div>
             </div>
         )
         else

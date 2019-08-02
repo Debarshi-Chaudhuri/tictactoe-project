@@ -23,16 +23,17 @@
   to { transform: rotate(360deg); }
 }
 .container{
-  background-color: rgb(253, 253, 253); /* Green */
+  background-color: rgb(253, 253, 253);
   border:black solid 0.05px;
   
   color: rgb(5, 5, 5);
-  padding: 15px 32px;
+  padding: 32px 39px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
 }
 .box{
-  display: block;
+  margin-bottom: -16px;
+  
 }
